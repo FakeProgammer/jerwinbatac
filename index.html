@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Transition Story</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: green;
+            color: #333;
+            transition: background-color 0.5s ease;
+        }
+
+        .story-section {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: yellow;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .show {
+            opacity: 1;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .transition-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #ff0000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .transition-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div id="section1" class="story-section show">
+    <h1>PETER THE RABIT
+      Once upon a time...</h1>
+  <img src="image/b.jpg" alt="Delicious Food Image 2">
+
+ 
+    <p>in the lush meadows of Greenborough, there lived a curious and adventurous rabbit named Petter. Petter was no ordinary rabbit; he had a coat of soft, silver fur that shimmered in the sunlight, making him stand out among his bunny friends.
+
+ 
+Petter spent his days exploring the vast fields, hopping through the tall grass and discovering hidden nooks where he could nibble on the juiciest clover. He had a keen sense of curiosity and an insatiable appetite for adventure.
+
+One day, as Petter hopped near the edge of the meadow, he stumbled upon an old, mysterious burrow hidden beneath the ancient oak tree. Intrigued by the unknown, he decided to venture inside. The burrow was dark and winding, but Petter fearlessly hopped along, uncovering a secret tunnel that led to a magical realm filled with talking woodland creatures.</p>
+    <div class="btn-container">
+        <button class="transition-btn" onclick="nextSection()">Continue</button>
+    </div>
+</div>
+
+<div id="section2" class="story-section">
+    <h2>In this enchanted realm...</h2>
+  <img src="image/a.jpeg" alt="Delicious Food Image 2">
+
+ 
+    <p> Petter befriended a wise old owl named Oliver, a playful squirrel named Squeaky, and a gentle deer named Daisy. Together, they embarked on thrilling escapades, solving mysteries and helping their fellow forest inhabitants. Petter's silver fur became a symbol of hope and bravery in the magical woodland.
+
+As seasons changed, so did the challenges that Petter and his newfound friends faced. From navigating through dense thickets to solving riddles presented by mischievous fairies, Petter's courage and quick thinking always shone through. His adventures were not only a testament to his bravery but also a reminder that friendship and kindness can overcome any obstacle.
+</p>
+    <div class="btn-container">
+        <button class="transition-btn" onclick="nextSection()">Continue</button>
+    </div>
+</div>
+
+<div id="section3" class="story-section">
+    <h2>One day...</h2>
+   <video width="320" height="240" controls>
+            <source src="image/c.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <p>a great storm swept through the meadows, causing distress among the woodland creatures. Petter, with his resilient spirit, rallied his friends to help build shelters and protect their homes. Through teamwork and determination, they weathered the storm, and the bond between the forest dwellers grew even stronger.
+
+As the sun set on Greenborough, Petter the rabbit stood atop a hill, looking over the meadows he had explored and the friends he had made. The magical realm had become a haven of unity and friendship, thanks to Petter's unwavering courage and compassionate heart.
+
+And so, in the heart of the enchanted woods, Petter continued to hop through life's adventures, leaving a trail of silver magic wherever he went—a reminder that even a small rabbit could make a big difference in the world.</p>
+  <h3>THE END...<h3/>
+</div>
+
+<script>
+    function nextSection() {
+        const currentSection = document.querySelector('.story-section.show');
+        const nextSection = currentSection.nextElementSibling;
+
+        currentSection.classList.remove('show');
+        nextSection.classList.add('show');
+    }
+</script>
+
+</body>
+</html>
